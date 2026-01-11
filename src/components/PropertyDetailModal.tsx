@@ -3,6 +3,7 @@ import React from 'react';
 // import { Property } from './SearchResultsPage'; // adjust path
 import ImageGallery from './ImageGallery'; // your new component
 import type { Property } from '../types';
+import PropertyMap from './PropertyMap';
 
 interface PropertyDetailModalProps {
     property: Property | null;
@@ -147,17 +148,29 @@ const PropertyDetailModal: React.FC<PropertyDetailModalProps> = ({
                         </div>
                     </section>
 
-                    {/* View on Map */}
-                    <a
-                        href={`https://maps.google.com/?q=${encodeURIComponent(
-                            `${property.location.address}, ${property.location.city}`
-                        )}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block mt-4 text-green-600 hover:underline text-sm"
-                    >
-                        🗺️ View on Google Maps
-                    </a>
+
+
+
+                    {/* Inside PropertyDetailModal.tsx */}
+                    {property.location.coordinates ? (
+                        <PropertyMap
+                            lat={property.location.coordinates.lat}
+                            lng={property.location.coordinates.lng}
+                            address={`${property.location.address}, ${property.location.city}`}
+                        />
+                    ) : (
+                        <a
+                            href={`https://maps.google.com/?q=${encodeURIComponent(
+                                `${property.location.address}, ${property.location.city}`
+                            )}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block mt-4 text-green-600 hover:underline text-sm"
+                        >
+                            🗺️ View on Google Maps
+                        </a>
+                    )}
+
                 </div>
             </div>
         </div>

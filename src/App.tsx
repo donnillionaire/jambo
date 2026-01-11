@@ -60,7 +60,7 @@ function App() {
 
           </Routes>
         </main>
-        <EmailSignup />
+        {/* <EmailSignup /> */}
         <FooterLinks />
       </div>
     </Router>

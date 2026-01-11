@@ -73,7 +73,7 @@ const FooterLinks = () => {
                 <li key={i}>
                   <a
                     href={link.href}
-                    className="text-[#082567] hover:text-green-700 text-sm transition-colors"
+                    className="text-gray-400 hover:text-[#0047AB] text-sm transition-colors"
                   >
                     {link.label}
                   </a>

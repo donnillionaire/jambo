@@ -65,9 +65,9 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-opacity-30 z-10"></div>
 
             {/* Content */}
-            <div className="relative z-20 max-w-3xl">
-                <h1 className="text-6xl md:text-6xl font-bold mb-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
-                    Discover your dream home in Kenya.
+            <div className="relative z-20 max-w-6xl">
+                <h1 className="text-6xl md:text-6xl font-bold mb-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-4">
+                    Discover Your Dream Home in Kenya
                 </h1>
                 <SearchBar />
             </div>
