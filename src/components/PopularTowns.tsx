@@ -7,7 +7,7 @@ interface Town {
   image: string; // You can replace with actual image paths later
 }
 
-//src\assets\jambo\test_1.jpeg
+
 
 const towns: Town[] = [
   { name: "Kamulu", image: "src/assets/jambo/test_11.jpeg" },
