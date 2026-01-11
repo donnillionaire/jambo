@@ -33,6 +33,7 @@ import PopularTowns from './components/PopularTowns';
 import EmailSignup from './components/EmailSignup';
 import FooterLinks from './components/FooterLinks';
 import SearchResultsPage from './components/SearchResultsPage';
+import PropertyDetailPage from './components/PropertyDetailPage';
 
 function App() {
   return (
@@ -54,6 +55,9 @@ function App() {
             />
             {/* Search results page */}
             <Route path="/results" element={<SearchResultsPage />} />
+
+            <Route path="/property/:id" element={<PropertyDetailPage />} />
+
           </Routes>
         </main>
         <EmailSignup />
